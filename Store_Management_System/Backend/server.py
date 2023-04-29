@@ -13,7 +13,7 @@ connection = get_sql_connection()
 def get_products():
     products = products_dao.get_all_products(connection)
     response = jsonify(products)
-    response.headers.add('Access-Control-Allow-Origin','*') ### Response that tells the browser to allow code from any origin to acess a resource
+    response.headers.add('Access-Control-Allow-Origin','*') 
     return response
 
 @app.route('/getUOM', methods=['GET'])
