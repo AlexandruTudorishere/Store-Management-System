@@ -1,6 +1,6 @@
 from  sql_connection import get_sql_connection
 
-def get_all_products(connection): # SQL connection on a different file (sql_connetion.py)
+def get_all_products(connection): 
 
     cursor = connection.cursor()
     query = ("SELECT products.product_id,products.name,products.uom_id, products.price_per_unit, uom.uom_name "
