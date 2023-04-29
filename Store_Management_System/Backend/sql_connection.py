@@ -1,6 +1,6 @@
 import mysql.connector
 
-__cnx = None   ### check for multiple connections
+__cnx = None  
 
 def get_sql_connection():
     global __cnx
