@@ -1,7 +1,7 @@
 var productModal = $("#productModal");
 $(function () {
 
-    //JSON data by API call
+    
     $.get(productListApiUrl, function (response) {
         if (response) {
             var table = '';
@@ -17,9 +17,9 @@ $(function () {
     });
 });
 
-// Save Product
+
 $("#saveProduct").on("click", function () {
-    // If we found id value in form then update product detail
+    
     var data = $("#productForm").serializeArray();
     var requestPayload = {
         product_name: null,
@@ -63,7 +63,7 @@ productModal.on('hide.bs.modal', function () {
 });
 
 productModal.on('show.bs.modal', function () {
-    //JSON data by API call
+    
     $.get(uomListApiUrl, function (response) {
         if (response) {
             var options = '<option value="">--Select--</option>';
