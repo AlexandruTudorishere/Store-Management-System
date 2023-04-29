@@ -72,7 +72,7 @@ def get_all_orders(connection):
 
     cursor.close()
 
-    # append order details in each order
+    
     for record in response:
         record['order_details'] = get_order_details(connection, record['order_id'])
 
